@@ -1,4 +1,4 @@
-# @ash/hasura-sdk
+# @ash0080/hasura-sdk
 Hasura Healthz/Schema/Metadata/PGdump API SDK. Written in TypeScript,
 Carefully tested and well orgnized.
 
@@ -8,9 +8,9 @@ Since hasura provided a REST API, why don't we use it?
 
 ## Installation
 
-```yarn add @ash/hasura-sdk```
+```yarn add @ash0080/hasura-sdk```
 
-```npm install @ash/hasura-sdk```
+```npm install @ash0080/hasura-sdk```
 
 ```cp .env.example to /path to your project/.env```
 

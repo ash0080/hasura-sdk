@@ -1,5 +1,5 @@
 {
-  "name": "@ash/hasura-sdk",
+  "name": "@ash0080/hasura-sdk",
   "version": "1.0.0",
   "description": "Hasura Healthz/Schema/Metadata/PGdump API SDK. Written in TypeScript, Carefully tested and fixed some official bugs",
   "main": "build/main",
