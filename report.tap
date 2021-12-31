@@ -1,0 +1,965 @@
+TAP version 13
+# Subtest: test/pgdump.ts
+    <ref *2> IncomingMessage {
+      _readableState: ReadableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        buffer: BufferList { head: null, tail: null, length: 0 },
+        length: 0,
+        pipes: [],
+        flowing: true,
+        ended: true,
+        endEmitted: true,
+        reading: false,
+        sync: true,
+        needReadable: false,
+        emittedReadable: false,
+        readableListening: false,
+        resumeScheduled: false,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: false,
+        destroyed: false,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        defaultEncoding: 'utf8',
+        awaitDrainWriters: null,
+        multiAwaitDrain: false,
+        readingMore: true,
+        dataEmitted: true,
+        decoder: null,
+        encoding: null,
+        [Symbol(kPaused)]: false
+      },
+      _events: [Object: null prototype] {
+        end: [ [Function: responseOnEnd], [Function (anonymous)] ],
+        error: [Function (anonymous)],
+        aborted: [Function (anonymous)],
+        data: [Function (anonymous)]
+      },
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      socket: <ref *1> Socket {
+        connecting: false,
+        _hadError: false,
+        _parent: null,
+        _host: 'localhost',
+        _readableState: ReadableState {
+          objectMode: false,
+          highWaterMark: 16384,
+          buffer: BufferList { head: null, tail: null, length: 0 },
+          length: 0,
+          pipes: [],
+          flowing: true,
+          ended: false,
+          endEmitted: false,
+          reading: true,
+          sync: false,
+          needReadable: true,
+          emittedReadable: false,
+          readableListening: false,
+          resumeScheduled: false,
+          errorEmitted: false,
+          emitClose: false,
+          autoDestroy: false,
+          destroyed: false,
+          errored: null,
+          closed: false,
+          closeEmitted: false,
+          defaultEncoding: 'utf8',
+          awaitDrainWriters: null,
+          multiAwaitDrain: false,
+          readingMore: false,
+          dataEmitted: true,
+          decoder: null,
+          encoding: null,
+          [Symbol(kPaused)]: false
+        },
+        _events: [Object: null prototype] {
+          end: [Function: onReadableStreamEnd],
+          free: [Function: onFree],
+          close: [ [Function: onClose], [Function: socketCloseListener] ],
+          timeout: [Function: onTimeout],
+          agentRemove: [Function: onRemove],
+          error: [Function: socketErrorListener],
+          finish: [Function: bound onceWrapper] { listener: [Function: destroy] }
+        },
+        _eventsCount: 7,
+        _maxListeners: undefined,
+        _writableState: WritableState {
+          objectMode: false,
+          highWaterMark: 16384,
+          finalCalled: true,
+          needDrain: false,
+          ending: true,
+          ended: true,
+          finished: false,
+          destroyed: false,
+          decodeStrings: false,
+          defaultEncoding: 'utf8',
+          length: 0,
+          writing: false,
+          corked: 0,
+          sync: false,
+          bufferProcessing: false,
+          onwrite: [Function: bound onwrite],
+          writecb: null,
+          writelen: 0,
+          afterWriteTickInfo: null,
+          buffered: [],
+          bufferedIndex: 0,
+          allBuffers: true,
+          allNoop: true,
+          pendingcb: 1,
+          prefinished: false,
+          errorEmitted: false,
+          emitClose: false,
+          autoDestroy: false,
+          errored: null,
+          closed: false,
+          closeEmitted: false,
+          writable: true
+        },
+        allowHalfOpen: false,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: null,
+        _server: null,
+        parser: null,
+        _httpMessage: ClientRequest {
+          _events: [Object: null prototype] {
+            socket: [Function (anonymous)],
+            timeout: [Function: bound onceWrapper] {
+              listener: [Function (anonymous)]
+            },
+            error: [Function (anonymous)],
+            prefinish: [Function: requestOnPrefinish]
+          },
+          _eventsCount: 4,
+          _maxListeners: undefined,
+          outputData: [],
+          outputSize: 0,
+          writable: true,
+          destroyed: false,
+          _last: true,
+          chunkedEncoding: false,
+          shouldKeepAlive: false,
+          _defaultKeepAlive: true,
+          useChunkedEncodingByDefault: true,
+          sendDate: false,
+          _removedConnection: false,
+          _removedContLen: false,
+          _removedTE: false,
+          _contentLength: null,
+          _hasBody: true,
+          _trailer: '',
+          finished: true,
+          _headerSent: true,
+          socket: [Circular *1],
+          _header: 'POST /v1alpha1/pg_dump HTTP/1.1\r\n' +
+            'x-hasura-role: admin\r\n' +
+            'x-hasura-admin-secret: VOWVlP9m9P4HQI9h\r\n' +
+            'content-type: application/json\r\n' +
+            'content-length: 95\r\n' +
+            'Host: localhost:8080\r\n' +
+            'Connection: close\r\n' +
+            '\r\n',
+          _keepAliveTimeout: 0,
+          _onPendingData: [Function: noopPendingOutput],
+          agent: Agent {
+            _events: [Object: null prototype] {
+              free: [Function (anonymous)],
+              newListener: [Function: maybeEnableKeylog]
+            },
+            _eventsCount: 2,
+            _maxListeners: undefined,
+            defaultPort: 80,
+            protocol: 'http:',
+            options: { path: null },
+            requests: {},
+            sockets: { 'localhost:8080:': [ [Circular *1] ] },
+            freeSockets: {},
+            keepAliveMsecs: 1000,
+            keepAlive: false,
+            maxSockets: Infinity,
+            maxFreeSockets: 256,
+            scheduling: 'lifo',
+            maxTotalSockets: Infinity,
+            totalSocketCount: 1,
+            [Symbol(kCapture)]: false
+          },
+          socketPath: undefined,
+          method: 'POST',
+          maxHeaderSize: undefined,
+          insecureHTTPParser: undefined,
+          path: '/v1alpha1/pg_dump',
+          _ended: true,
+          res: [Circular *2],
+          aborted: false,
+          timeoutCb: [Function: emitRequestTimeout],
+          upgradeOrConnect: false,
+          parser: null,
+          maxHeadersCount: null,
+          reusedSocket: false,
+          host: 'localhost',
+          protocol: 'http:',
+          [Symbol(kCapture)]: false,
+          [Symbol(kNeedDrain)]: false,
+          [Symbol(corked)]: 0,
+          [Symbol(kOutHeaders)]: [Object: null prototype] {
+            'x-hasura-role': [ 'x-hasura-role', 'admin' ],
+            'x-hasura-admin-secret': [ 'x-hasura-admin-secret', 'VOWVlP9m9P4HQI9h' ],
+            'content-type': [ 'content-type', 'application/json' ],
+            'content-length': [ 'content-length', 95 ],
+            host: [ 'Host', 'localhost:8080' ]
+          }
+        },
+        timeout: 10000,
+        [Symbol(async_id_symbol)]: 39,
+        [Symbol(kHandle)]: TCP {
+          reading: true,
+          onconnection: null,
+          [Symbol(owner_symbol)]: [Circular *1]
+        },
+        [Symbol(kSetNoDelay)]: false,
+        [Symbol(lastWriteQueueSize)]: 0,
+        [Symbol(timeout)]: <ref *3> Timeout {
+          _idleTimeout: 10000,
+          _idlePrev: TimersList {
+            _idleNext: [Circular *3],
+            _idlePrev: [Circular *3],
+            expiry: 12696,
+            id: -9007199254740991,
+            msecs: 10000,
+            priorityQueuePosition: 1
+          },
+          _idleNext: TimersList {
+            _idleNext: [Circular *3],
+            _idlePrev: [Circular *3],
+            expiry: 12696,
+            id: -9007199254740991,
+            msecs: 10000,
+            priorityQueuePosition: 1
+          },
+          _idleStart: 2877,
+          _onTimeout: [Function: bound ],
+          _timerArgs: undefined,
+          _repeat: null,
+          _destroyed: false,
+          [Symbol(refed)]: false,
+          [Symbol(kHasPrimitive)]: false,
+          [Symbol(asyncId)]: 52,
+          [Symbol(triggerId)]: 50
+        },
+        [Symbol(kBuffer)]: null,
+        [Symbol(kBufferCb)]: null,
+        [Symbol(kBufferGen)]: null,
+        [Symbol(kCapture)]: false,
+        [Symbol(kBytesRead)]: 0,
+        [Symbol(kBytesWritten)]: 0,
+        [Symbol(RequestTimeout)]: undefined
+      },
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      headers: {
+        'transfer-encoding': 'chunked',
+        date: 'Thu, 30 Dec 2021 07:13:57 GMT',
+        server: 'Warp/3.3.14',
+        'x-request-id': 'a2175717-dacd-4131-a638-c1062852c342',
+        'content-type': 'application/sql; charset=utf-8'
+      },
+      rawHeaders: [
+        'Transfer-Encoding',
+        'chunked',
+        'Date',
+        'Thu, 30 Dec 2021 07:13:57 GMT',
+        'Server',
+        'Warp/3.3.14',
+        'x-request-id',
+        'a2175717-dacd-4131-a638-c1062852c342',
+        'Content-Type',
+        'application/sql; charset=utf-8'
+      ],
+      trailers: {},
+      rawTrailers: [],
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 200,
+      statusMessage: 'OK',
+      client: <ref *1> Socket {
+        connecting: false,
+        _hadError: false,
+        _parent: null,
+        _host: 'localhost',
+        _readableState: ReadableState {
+          objectMode: false,
+          highWaterMark: 16384,
+          buffer: BufferList { head: null, tail: null, length: 0 },
+          length: 0,
+          pipes: [],
+          flowing: true,
+          ended: false,
+          endEmitted: false,
+          reading: true,
+          sync: false,
+          needReadable: true,
+          emittedReadable: false,
+          readableListening: false,
+          resumeScheduled: false,
+          errorEmitted: false,
+          emitClose: false,
+          autoDestroy: false,
+          destroyed: false,
+          errored: null,
+          closed: false,
+          closeEmitted: false,
+          defaultEncoding: 'utf8',
+          awaitDrainWriters: null,
+          multiAwaitDrain: false,
+          readingMore: false,
+          dataEmitted: true,
+          decoder: null,
+          encoding: null,
+          [Symbol(kPaused)]: false
+        },
+        _events: [Object: null prototype] {
+          end: [Function: onReadableStreamEnd],
+          free: [Function: onFree],
+          close: [ [Function: onClose], [Function: socketCloseListener] ],
+          timeout: [Function: onTimeout],
+          agentRemove: [Function: onRemove],
+          error: [Function: socketErrorListener],
+          finish: [Function: bound onceWrapper] { listener: [Function: destroy] }
+        },
+        _eventsCount: 7,
+        _maxListeners: undefined,
+        _writableState: WritableState {
+          objectMode: false,
+          highWaterMark: 16384,
+          finalCalled: true,
+          needDrain: false,
+          ending: true,
+          ended: true,
+          finished: false,
+          destroyed: false,
+          decodeStrings: false,
+          defaultEncoding: 'utf8',
+          length: 0,
+          writing: false,
+          corked: 0,
+          sync: false,
+          bufferProcessing: false,
+          onwrite: [Function: bound onwrite],
+          writecb: null,
+          writelen: 0,
+          afterWriteTickInfo: null,
+          buffered: [],
+          bufferedIndex: 0,
+          allBuffers: true,
+          allNoop: true,
+          pendingcb: 1,
+          prefinished: false,
+          errorEmitted: false,
+          emitClose: false,
+          autoDestroy: false,
+          errored: null,
+          closed: false,
+          closeEmitted: false,
+          writable: true
+        },
+        allowHalfOpen: false,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: null,
+        _server: null,
+        parser: null,
+        _httpMessage: ClientRequest {
+          _events: [Object: null prototype] {
+            socket: [Function (anonymous)],
+            timeout: [Function: bound onceWrapper] {
+              listener: [Function (anonymous)]
+            },
+            error: [Function (anonymous)],
+            prefinish: [Function: requestOnPrefinish]
+          },
+          _eventsCount: 4,
+          _maxListeners: undefined,
+          outputData: [],
+          outputSize: 0,
+          writable: true,
+          destroyed: false,
+          _last: true,
+          chunkedEncoding: false,
+          shouldKeepAlive: false,
+          _defaultKeepAlive: true,
+          useChunkedEncodingByDefault: true,
+          sendDate: false,
+          _removedConnection: false,
+          _removedContLen: false,
+          _removedTE: false,
+          _contentLength: null,
+          _hasBody: true,
+          _trailer: '',
+          finished: true,
+          _headerSent: true,
+          socket: [Circular *1],
+          _header: 'POST /v1alpha1/pg_dump HTTP/1.1\r\n' +
+            'x-hasura-role: admin\r\n' +
+            'x-hasura-admin-secret: VOWVlP9m9P4HQI9h\r\n' +
+            'content-type: application/json\r\n' +
+            'content-length: 95\r\n' +
+            'Host: localhost:8080\r\n' +
+            'Connection: close\r\n' +
+            '\r\n',
+          _keepAliveTimeout: 0,
+          _onPendingData: [Function: noopPendingOutput],
+          agent: Agent {
+            _events: [Object: null prototype] {
+              free: [Function (anonymous)],
+              newListener: [Function: maybeEnableKeylog]
+            },
+            _eventsCount: 2,
+            _maxListeners: undefined,
+            defaultPort: 80,
+            protocol: 'http:',
+            options: { path: null },
+            requests: {},
+            sockets: { 'localhost:8080:': [ [Circular *1] ] },
+            freeSockets: {},
+            keepAliveMsecs: 1000,
+            keepAlive: false,
+            maxSockets: Infinity,
+            maxFreeSockets: 256,
+            scheduling: 'lifo',
+            maxTotalSockets: Infinity,
+            totalSocketCount: 1,
+            [Symbol(kCapture)]: false
+          },
+          socketPath: undefined,
+          method: 'POST',
+          maxHeaderSize: undefined,
+          insecureHTTPParser: undefined,
+          path: '/v1alpha1/pg_dump',
+          _ended: true,
+          res: [Circular *2],
+          aborted: false,
+          timeoutCb: [Function: emitRequestTimeout],
+          upgradeOrConnect: false,
+          parser: null,
+          maxHeadersCount: null,
+          reusedSocket: false,
+          host: 'localhost',
+          protocol: 'http:',
+          [Symbol(kCapture)]: false,
+          [Symbol(kNeedDrain)]: false,
+          [Symbol(corked)]: 0,
+          [Symbol(kOutHeaders)]: [Object: null prototype] {
+            'x-hasura-role': [ 'x-hasura-role', 'admin' ],
+            'x-hasura-admin-secret': [ 'x-hasura-admin-secret', 'VOWVlP9m9P4HQI9h' ],
+            'content-type': [ 'content-type', 'application/json' ],
+            'content-length': [ 'content-length', 95 ],
+            host: [ 'Host', 'localhost:8080' ]
+          }
+        },
+        timeout: 10000,
+        [Symbol(async_id_symbol)]: 39,
+        [Symbol(kHandle)]: TCP {
+          reading: true,
+          onconnection: null,
+          [Symbol(owner_symbol)]: [Circular *1]
+        },
+        [Symbol(kSetNoDelay)]: false,
+        [Symbol(lastWriteQueueSize)]: 0,
+        [Symbol(timeout)]: <ref *3> Timeout {
+          _idleTimeout: 10000,
+          _idlePrev: TimersList {
+            _idleNext: [Circular *3],
+            _idlePrev: [Circular *3],
+            expiry: 12696,
+            id: -9007199254740991,
+            msecs: 10000,
+            priorityQueuePosition: 1
+          },
+          _idleNext: TimersList {
+            _idleNext: [Circular *3],
+            _idlePrev: [Circular *3],
+            expiry: 12696,
+            id: -9007199254740991,
+            msecs: 10000,
+            priorityQueuePosition: 1
+          },
+          _idleStart: 2877,
+          _onTimeout: [Function: bound ],
+          _timerArgs: undefined,
+          _repeat: null,
+          _destroyed: false,
+          [Symbol(refed)]: false,
+          [Symbol(kHasPrimitive)]: false,
+          [Symbol(asyncId)]: 52,
+          [Symbol(triggerId)]: 50
+        },
+        [Symbol(kBuffer)]: null,
+        [Symbol(kBufferCb)]: null,
+        [Symbol(kBufferGen)]: null,
+        [Symbol(kCapture)]: false,
+        [Symbol(kBytesRead)]: 0,
+        [Symbol(kBytesWritten)]: 0,
+        [Symbol(RequestTimeout)]: undefined
+      },
+      _consuming: false,
+      _dumped: false,
+      req: <ref *4> ClientRequest {
+        _events: [Object: null prototype] {
+          socket: [Function (anonymous)],
+          timeout: [Function: bound onceWrapper] { listener: [Function (anonymous)] },
+          error: [Function (anonymous)],
+          prefinish: [Function: requestOnPrefinish]
+        },
+        _eventsCount: 4,
+        _maxListeners: undefined,
+        outputData: [],
+        outputSize: 0,
+        writable: true,
+        destroyed: false,
+        _last: true,
+        chunkedEncoding: false,
+        shouldKeepAlive: false,
+        _defaultKeepAlive: true,
+        useChunkedEncodingByDefault: true,
+        sendDate: false,
+        _removedConnection: false,
+        _removedContLen: false,
+        _removedTE: false,
+        _contentLength: null,
+        _hasBody: true,
+        _trailer: '',
+        finished: true,
+        _headerSent: true,
+        socket: <ref *1> Socket {
+          connecting: false,
+          _hadError: false,
+          _parent: null,
+          _host: 'localhost',
+          _readableState: ReadableState {
+            objectMode: false,
+            highWaterMark: 16384,
+            buffer: BufferList { head: null, tail: null, length: 0 },
+            length: 0,
+            pipes: [],
+            flowing: true,
+            ended: false,
+            endEmitted: false,
+            reading: true,
+            sync: false,
+            needReadable: true,
+            emittedReadable: false,
+            readableListening: false,
+            resumeScheduled: false,
+            errorEmitted: false,
+            emitClose: false,
+            autoDestroy: false,
+            destroyed: false,
+            errored: null,
+            closed: false,
+            closeEmitted: false,
+            defaultEncoding: 'utf8',
+            awaitDrainWriters: null,
+            multiAwaitDrain: false,
+            readingMore: false,
+            dataEmitted: true,
+            decoder: null,
+            encoding: null,
+            [Symbol(kPaused)]: false
+          },
+          _events: [Object: null prototype] {
+            end: [Function: onReadableStreamEnd],
+            free: [Function: onFree],
+            close: [ [Function: onClose], [Function: socketCloseListener] ],
+            timeout: [Function: onTimeout],
+            agentRemove: [Function: onRemove],
+            error: [Function: socketErrorListener],
+            finish: [Function: bound onceWrapper] { listener: [Function: destroy] }
+          },
+          _eventsCount: 7,
+          _maxListeners: undefined,
+          _writableState: WritableState {
+            objectMode: false,
+            highWaterMark: 16384,
+            finalCalled: true,
+            needDrain: false,
+            ending: true,
+            ended: true,
+            finished: false,
+            destroyed: false,
+            decodeStrings: false,
+            defaultEncoding: 'utf8',
+            length: 0,
+            writing: false,
+            corked: 0,
+            sync: false,
+            bufferProcessing: false,
+            onwrite: [Function: bound onwrite],
+            writecb: null,
+            writelen: 0,
+            afterWriteTickInfo: null,
+            buffered: [],
+            bufferedIndex: 0,
+            allBuffers: true,
+            allNoop: true,
+            pendingcb: 1,
+            prefinished: false,
+            errorEmitted: false,
+            emitClose: false,
+            autoDestroy: false,
+            errored: null,
+            closed: false,
+            closeEmitted: false,
+            writable: true
+          },
+          allowHalfOpen: false,
+          _sockname: null,
+          _pendingData: null,
+          _pendingEncoding: '',
+          server: null,
+          _server: null,
+          parser: null,
+          _httpMessage: [Circular *4],
+          timeout: 10000,
+          [Symbol(async_id_symbol)]: 39,
+          [Symbol(kHandle)]: TCP {
+            reading: true,
+            onconnection: null,
+            [Symbol(owner_symbol)]: [Circular *1]
+          },
+          [Symbol(kSetNoDelay)]: false,
+          [Symbol(lastWriteQueueSize)]: 0,
+          [Symbol(timeout)]: <ref *3> Timeout {
+            _idleTimeout: 10000,
+            _idlePrev: TimersList {
+              _idleNext: [Circular *3],
+              _idlePrev: [Circular *3],
+              expiry: 12696,
+              id: -9007199254740991,
+              msecs: 10000,
+              priorityQueuePosition: 1
+            },
+            _idleNext: TimersList {
+              _idleNext: [Circular *3],
+              _idlePrev: [Circular *3],
+              expiry: 12696,
+              id: -9007199254740991,
+              msecs: 10000,
+              priorityQueuePosition: 1
+            },
+            _idleStart: 2877,
+            _onTimeout: [Function: bound ],
+            _timerArgs: undefined,
+            _repeat: null,
+            _destroyed: false,
+            [Symbol(refed)]: false,
+            [Symbol(kHasPrimitive)]: false,
+            [Symbol(asyncId)]: 52,
+            [Symbol(triggerId)]: 50
+          },
+          [Symbol(kBuffer)]: null,
+          [Symbol(kBufferCb)]: null,
+          [Symbol(kBufferGen)]: null,
+          [Symbol(kCapture)]: false,
+          [Symbol(kBytesRead)]: 0,
+          [Symbol(kBytesWritten)]: 0,
+          [Symbol(RequestTimeout)]: undefined
+        },
+        _header: 'POST /v1alpha1/pg_dump HTTP/1.1\r\n' +
+          'x-hasura-role: admin\r\n' +
+          'x-hasura-admin-secret: VOWVlP9m9P4HQI9h\r\n' +
+          'content-type: application/json\r\n' +
+          'content-length: 95\r\n' +
+          'Host: localhost:8080\r\n' +
+          'Connection: close\r\n' +
+          '\r\n',
+        _keepAliveTimeout: 0,
+        _onPendingData: [Function: noopPendingOutput],
+        agent: Agent {
+          _events: [Object: null prototype] {
+            free: [Function (anonymous)],
+            newListener: [Function: maybeEnableKeylog]
+          },
+          _eventsCount: 2,
+          _maxListeners: undefined,
+          defaultPort: 80,
+          protocol: 'http:',
+          options: { path: null },
+          requests: {},
+          sockets: {
+            'localhost:8080:': [
+              <ref *1> Socket {
+                connecting: false,
+                _hadError: false,
+                _parent: null,
+                _host: 'localhost',
+                _readableState: ReadableState {
+                  objectMode: false,
+                  highWaterMark: 16384,
+                  buffer: BufferList { head: null, tail: null, length: 0 },
+                  length: 0,
+                  pipes: [],
+                  flowing: true,
+                  ended: false,
+                  endEmitted: false,
+                  reading: true,
+                  sync: false,
+                  needReadable: true,
+                  emittedReadable: false,
+                  readableListening: false,
+                  resumeScheduled: false,
+                  errorEmitted: false,
+                  emitClose: false,
+                  autoDestroy: false,
+                  destroyed: false,
+                  errored: null,
+                  closed: false,
+                  closeEmitted: false,
+                  defaultEncoding: 'utf8',
+                  awaitDrainWriters: null,
+                  multiAwaitDrain: false,
+                  readingMore: false,
+                  dataEmitted: true,
+                  decoder: null,
+                  encoding: null,
+                  [Symbol(kPaused)]: false
+                },
+                _events: [Object: null prototype] {
+                  end: [Function: onReadableStreamEnd],
+                  free: [Function: onFree],
+                  close: [ [Function: onClose], [Function: socketCloseListener] ],
+                  timeout: [Function: onTimeout],
+                  agentRemove: [Function: onRemove],
+                  error: [Function: socketErrorListener],
+                  finish: [Function: bound onceWrapper] {
+                    listener: [Function: destroy]
+                  }
+                },
+                _eventsCount: 7,
+                _maxListeners: undefined,
+                _writableState: WritableState {
+                  objectMode: false,
+                  highWaterMark: 16384,
+                  finalCalled: true,
+                  needDrain: false,
+                  ending: true,
+                  ended: true,
+                  finished: false,
+                  destroyed: false,
+                  decodeStrings: false,
+                  defaultEncoding: 'utf8',
+                  length: 0,
+                  writing: false,
+                  corked: 0,
+                  sync: false,
+                  bufferProcessing: false,
+                  onwrite: [Function: bound onwrite],
+                  writecb: null,
+                  writelen: 0,
+                  afterWriteTickInfo: null,
+                  buffered: [],
+                  bufferedIndex: 0,
+                  allBuffers: true,
+                  allNoop: true,
+                  pendingcb: 1,
+                  prefinished: false,
+                  errorEmitted: false,
+                  emitClose: false,
+                  autoDestroy: false,
+                  errored: null,
+                  closed: false,
+                  closeEmitted: false,
+                  writable: true
+                },
+                allowHalfOpen: false,
+                _sockname: null,
+                _pendingData: null,
+                _pendingEncoding: '',
+                server: null,
+                _server: null,
+                parser: null,
+                _httpMessage: [Circular *4],
+                timeout: 10000,
+                [Symbol(async_id_symbol)]: 39,
+                [Symbol(kHandle)]: TCP {
+                  reading: true,
+                  onconnection: null,
+                  [Symbol(owner_symbol)]: [Circular *1]
+                },
+                [Symbol(kSetNoDelay)]: false,
+                [Symbol(lastWriteQueueSize)]: 0,
+                [Symbol(timeout)]: <ref *3> Timeout {
+                  _idleTimeout: 10000,
+                  _idlePrev: TimersList {
+                    _idleNext: [Circular *3],
+                    _idlePrev: [Circular *3],
+                    expiry: 12696,
+                    id: -9007199254740991,
+                    msecs: 10000,
+                    priorityQueuePosition: 1
+                  },
+                  _idleNext: TimersList {
+                    _idleNext: [Circular *3],
+                    _idlePrev: [Circular *3],
+                    expiry: 12696,
+                    id: -9007199254740991,
+                    msecs: 10000,
+                    priorityQueuePosition: 1
+                  },
+                  _idleStart: 2877,
+                  _onTimeout: [Function: bound ],
+                  _timerArgs: undefined,
+                  _repeat: null,
+                  _destroyed: false,
+                  [Symbol(refed)]: false,
+                  [Symbol(kHasPrimitive)]: false,
+                  [Symbol(asyncId)]: 52,
+                  [Symbol(triggerId)]: 50
+                },
+                [Symbol(kBuffer)]: null,
+                [Symbol(kBufferCb)]: null,
+                [Symbol(kBufferGen)]: null,
+                [Symbol(kCapture)]: false,
+                [Symbol(kBytesRead)]: 0,
+                [Symbol(kBytesWritten)]: 0,
+                [Symbol(RequestTimeout)]: undefined
+              }
+            ]
+          },
+          freeSockets: {},
+          keepAliveMsecs: 1000,
+          keepAlive: false,
+          maxSockets: Infinity,
+          maxFreeSockets: 256,
+          scheduling: 'lifo',
+          maxTotalSockets: Infinity,
+          totalSocketCount: 1,
+          [Symbol(kCapture)]: false
+        },
+        socketPath: undefined,
+        method: 'POST',
+        maxHeaderSize: undefined,
+        insecureHTTPParser: undefined,
+        path: '/v1alpha1/pg_dump',
+        _ended: true,
+        res: [Circular *2],
+        aborted: false,
+        timeoutCb: [Function: emitRequestTimeout],
+        upgradeOrConnect: false,
+        parser: null,
+        maxHeadersCount: null,
+        reusedSocket: false,
+        host: 'localhost',
+        protocol: 'http:',
+        [Symbol(kCapture)]: false,
+        [Symbol(kNeedDrain)]: false,
+        [Symbol(corked)]: 0,
+        [Symbol(kOutHeaders)]: [Object: null prototype] {
+          'x-hasura-role': [ 'x-hasura-role', 'admin' ],
+          'x-hasura-admin-secret': [ 'x-hasura-admin-secret', 'VOWVlP9m9P4HQI9h' ],
+          'content-type': [ 'content-type', 'application/json' ],
+          'content-length': [ 'content-length', 95 ],
+          host: [ 'Host', 'localhost:8080' ]
+        }
+      },
+      body: 'SET check_function_bodies = false;\n' +
+        'CREATE FUNCTION public.hello() RETURNS text\n' +
+        '    LANGUAGE sql\n' +
+        '    AS $$\n' +
+        "    select 'hello world';\n" +
+        '$$;\n' +
+        'CREATE FUNCTION public.set_current_timestamp_updated_at() RETURNS trigger\n' +
+        '    LANGUAGE plpgsql\n' +
+        '    AS $$\n' +
+        'declare\n' +
+        '  _new record;\n' +
+        'begin\n' +
+        '  _new := new;\n' +
+        '  _new. "updated_at" = now();\n' +
+        '  return _new;\n' +
+        'end;\n' +
+        '$$;\n' +
+        'CREATE TABLE public.file (\n' +
+        '    id uuid DEFAULT public.gen_random_uuid() NOT NULL,\n' +
+        '    name text NOT NULL\n' +
+        ');\n' +
+        'CREATE TABLE public.films (\n' +
+        '    id uuid DEFAULT public.gen_random_uuid() NOT NULL,\n' +
+        '    title text NOT NULL\n' +
+        ');\n' +
+        'CREATE TABLE public.records (\n' +
+        '    id uuid DEFAULT public.gen_random_uuid() NOT NULL,\n' +
+        '    file uuid NOT NULL\n' +
+        ');\n' +
+        'CREATE TABLE public.storage (\n' +
+        '    id integer NOT NULL,\n' +
+        '    name character varying(255),\n' +
+        '    type character varying(255),\n' +
+        '    value character varying(255),\n' +
+        '    created_at timestamp with time zone,\n' +
+        '    updated_at timestamp with time zone\n' +
+        ');\n' +
+        'CREATE SEQUENCE public.storage_id_seq\n' +
+        '    AS integer\n' +
+        '    START WITH 1\n' +
+        '    INCREMENT BY 1\n' +
+        '    NO MINVALUE\n' +
+        '    NO MAXVALUE\n' +
+        '    CACHE 1;\n' +
+        'ALTER SEQUENCE public.storage_id_seq OWNED BY public.storage.id;\n' +
+        "ALTER TABLE ONLY public.storage ALTER COLUMN id SET DEFAULT nextval('public.storage_id_seq'::regclass);\n" +
+        'ALTER TABLE ONLY public.file\n' +
+        '    ADD CONSTRAINT file_pkey PRIMARY KEY (id);\n' +
+        'ALTER TABLE ONLY public.films\n' +
+        '    ADD CONSTRAINT films_pkey PRIMARY KEY (id);\n' +
+        'ALTER TABLE ONLY public.records\n' +
+        '    ADD CONSTRAINT records_pkey PRIMARY KEY (id);\n' +
+        'ALTER TABLE ONLY public.storage\n' +
+        '    ADD CONSTRAINT storage_pkey PRIMARY KEY (id);\n' +
+        'CREATE UNIQUE INDEX films_title_idx ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx1 ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx10 ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx11 ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx12 ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx13 ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx14 ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx15 ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx16 ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx17 ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx2 ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx3 ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx4 ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx5 ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx6 ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx7 ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx8 ON public.films USING btree (title);\n' +
+        'CREATE UNIQUE INDEX films_title_idx9 ON public.films USING btree (title);\n' +
+        'ALTER TABLE ONLY public.records\n' +
+        '    ADD CONSTRAINT records_file_fkey FOREIGN KEY (file) REFERENCES public.file(id) ON UPDATE RESTRICT ON DELETE RESTRICT;\n',
+      [Symbol(kCapture)]: false,
+      [Symbol(RequestTimeout)]: undefined
+    }
+    # Subtest: PGdump
+        ok 1 - should be equal
+        1..1
+    ok 1 - PGdump # time=199.262ms
+    
+    1..1
+    # time=2022.083ms
+    [1640848437109] [32mINFO[39m (7135 on ElvisMini.local):
+        msg: true
+ok 1 - test/pgdump.ts # time=2022.083ms
+
+1..1
+# time=5883.275ms

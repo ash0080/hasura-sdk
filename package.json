@@ -1,0 +1,54 @@
+{
+  "name": "@ash/hasura-sdk",
+  "version": "1.0.0",
+  "description": "Hasura Healthz/Schema/Metadata/PGdump API SDK. Written in TypeScript, Carefully tested and fixed some official bugs",
+  "main": "build/main",
+  "typings": "build/main/index.d.ts",
+  "module": "build/module/index.js",
+  "repository": "https://github.com/ash0080/hasura-sdk",
+  "license": "MIT",
+  "keywords": [
+    "hasura",
+    "typescript",
+    "metadata",
+    "healthz",
+    "pgdump",
+    "schema",
+    "sdk",
+    "query",
+    "graphql"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "env $(cat .env) tap --ts -j1 -R=specy -o report.tap",
+    "lint": "eslint . --cache --fix --ext .ts,.tsx",
+    "prebuild": "del-cli dist",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.module.json",
+    "start": "node dist/index.js",
+    "prepublishOnly": "pnpm build  --enable-pre-post-scripts"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "@types/node": "^17.0.4",
+    "phin": "^3.6.1",
+    "serialize-error": "8.1.0",
+    "type-fest": "^2.8.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/parser": "^5.8.0",
+    "console-table-printer": "^2.10.0",
+    "del-cli": "^4.0.1",
+    "eslint": "^8.5.0",
+    "knex": "^0.95.15",
+    "msw": "^0.36.3",
+    "pino": "^7.6.1",
+    "pino-pretty": "^7.3.0",
+    "tap": "^15.1.5",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.5.4"
+  }
+}

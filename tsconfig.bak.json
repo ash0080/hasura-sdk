@@ -1,0 +1,44 @@
+{
+  "ts-node": {
+    //    "transpileOnly": true,
+    "files": true,
+    "compilerOptions": {
+      "module": "commonjs"
+      // compilerOptions specified here will override those declared below,
+      // but *only* in ts-node.  Useful if you want ts-node and tsc to use
+      // different options with a single tsconfig.json.
+    }
+  },
+  "compilerOptions": {
+    "rootDirs": [
+      "src"
+    ],
+    "target": "ES2020",
+    //    "module": "ES2020",
+    "esModuleInterop": true,
+    "allowJs": false,
+    //    "baseUrl": "./",
+    //    "types": [ "node" ],
+    //    "forceConsistentCasingInFileNames": true,
+    //    "strict": true,
+    //    "skipLibCheck": true,
+    "outDir": "./dist",
+    //    "declaration": true,
+    "moduleResolution": "node"
+    //    "experimentalDecorators": true,
+    //    "emitDecoratorMetadata": true,
+    //    "noUnusedLocals": true,
+    //    "pretty": true,
+    //    "lib": [
+    //      "esnext"
+    //    ]
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "src/dataSources/**/*",
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
