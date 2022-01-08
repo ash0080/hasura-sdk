@@ -1,5 +1,5 @@
 import tap from 'tap'
-import h from '../../src/metadata'
+import {metadata as h} from '../helper/sdk'
 import log from '../helper/log'
 
 // HINT: create an API from 'https://fakeql.com/' and use the fragil version url

@@ -1,7 +1,8 @@
-import assert from 'assert'
-
-assert.ok(process.env.HASURA_ADMIN_SECRET, 'Admin Secret is required!')
-export const admin = {
-	'X-Hasura-Role': 'admin',
-	'X-Hasura-Admin-Secret': process.env.HASURA_ADMIN_SECRET,
+export interface Headers {
+  [key: string]: string
 }
+
+export default (secret): Headers => ({
+  'X-Hasura-Role': 'admin',
+  'X-Hasura-Admin-Secret': secret,
+})

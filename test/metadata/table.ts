@@ -1,6 +1,5 @@
 import tap from 'tap'
-import h from '../../src/metadata'
-import s from '../../src/schema'
+import {metadata as h, schema as s} from '../helper/sdk'
 import knex from 'knex'
 import log from '../helper/log'
 

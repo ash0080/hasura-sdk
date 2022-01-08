@@ -16,7 +16,10 @@ Since hasura provided a REST API, why don't we use it?
 
 ## Usage
 ```
-import {metadata as m, schema as s} from '@ash/hasura-sdk'
+// From Ver 1.1.0, you can use environment variables or options, or mixture to config the SDK,
+// This change is to better integrate with other frameworks, such as fastify
+import genSDK from '@ash/hasura-sdk'
+const {metadata as m, schema as s} = genSDK()
 const runASQL = s.sql({sql: `SELECT version()`})
 const sqlResp = await runASQL.run()
 
@@ -181,8 +184,9 @@ Metadata:/
 ```
 
 ## Changelog
+1.1.0 - Refactoring with the Factory Pattern, now you can use environment variables or options, or mixture to config the SDK;
 
-1.0.0 - Cover the full features of the Healthz/Schema/Metadata/PGdump API
+1.0.0 - Cover the full features of the Healthz/Schema/Metadata/PGdump API;
 
 
 ## Todo

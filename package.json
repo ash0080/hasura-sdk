@@ -1,6 +1,6 @@
 {
   "name": "@ash0080/hasura-sdk",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Hasura Healthz/Schema/Metadata/PGdump API SDK. Written in TypeScript, Carefully tested and fixed some official bugs",
   "main": "build/main",
   "typings": "build/main/index.d.ts",
@@ -22,7 +22,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "env $(cat .env) tap --ts -j1 -R=specy -o report.tap",
+    "test": "env $(cat .env) tap --ts -j1 -R=specy -o report.tap -w test/**/*.ts",
     "lint": "eslint . --cache --fix --ext .ts,.tsx",
     "prebuild": "del-cli dist",
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.module.json",

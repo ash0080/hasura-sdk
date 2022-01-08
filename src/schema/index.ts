@@ -1,17 +1,26 @@
-import {SourceName} from '../metadata/partial_types/syntax_patch_types'
-import {QueryType, SchemaBulk, SchemaQuery} from '../queries'
+import {Headers} from '../helper/headers'
+import {URL}
+  from 'url'
+import {RunSQLArgs} from './schema_queries'
+import {
+  QueryType,
+} from '../abstract_query'
+import queryBuilder
+  from './schema_queries'
+import {Query} from '../abstract_query'
 
-export type SchemaQueryType = 'run_sql'
-
-export interface RunSQLArgs {
-	sql: string
-	source?: SourceName
-	cascade?: boolean
-	check_metadata_consistency?: boolean
-	read_only?: boolean
+export interface SchemaSDK {
+  sql: (args: RunSQLArgs) => Query,
+  bulk: (args: Array<QueryType<RunSQLArgs>>) => Query
 }
 
-export default {
-	sql: (args: RunSQLArgs) => new SchemaQuery('run_sql', args),
-	bulk: (args: Array<QueryType<RunSQLArgs>>) => new SchemaBulk(args),
+export default (url: URL, headers: Headers) => {
+  const {
+    bulk,
+    query,
+  } = queryBuilder(url, headers)
+  return {
+    bulk: (args) => bulk(args),
+    sql: (args) => query(args),
+  }
 }

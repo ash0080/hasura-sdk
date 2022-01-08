@@ -1,5 +1,6 @@
 .eslintcache
 .env
 play
+datasources
 build
 node_modules

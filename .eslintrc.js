@@ -10,6 +10,6 @@ module.exports={
     node: true,
   },
   rules:         {
-    ' no-unused-vars': 'warn',
+    'no-unused-vars': 'warn',
   },
 }

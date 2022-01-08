@@ -1,965 +1,831 @@
 TAP version 13
-# Subtest: test/pgdump.ts
-    <ref *2> IncomingMessage {
-      _readableState: ReadableState {
-        objectMode: false,
-        highWaterMark: 16384,
-        buffer: BufferList { head: null, tail: null, length: 0 },
-        length: 0,
-        pipes: [],
-        flowing: true,
-        ended: true,
-        endEmitted: true,
-        reading: false,
-        sync: true,
-        needReadable: false,
-        emittedReadable: false,
-        readableListening: false,
-        resumeScheduled: false,
-        errorEmitted: false,
-        emitClose: true,
-        autoDestroy: false,
-        destroyed: false,
-        errored: null,
-        closed: false,
-        closeEmitted: false,
-        defaultEncoding: 'utf8',
-        awaitDrainWriters: null,
-        multiAwaitDrain: false,
-        readingMore: true,
-        dataEmitted: true,
-        decoder: null,
-        encoding: null,
-        [Symbol(kPaused)]: false
-      },
-      _events: [Object: null prototype] {
-        end: [ [Function: responseOnEnd], [Function (anonymous)] ],
-        error: [Function (anonymous)],
-        aborted: [Function (anonymous)],
-        data: [Function (anonymous)]
-      },
-      _eventsCount: 4,
-      _maxListeners: undefined,
-      socket: <ref *1> Socket {
-        connecting: false,
-        _hadError: false,
-        _parent: null,
-        _host: 'localhost',
-        _readableState: ReadableState {
-          objectMode: false,
-          highWaterMark: 16384,
-          buffer: BufferList { head: null, tail: null, length: 0 },
-          length: 0,
-          pipes: [],
-          flowing: true,
-          ended: false,
-          endEmitted: false,
-          reading: true,
-          sync: false,
-          needReadable: true,
-          emittedReadable: false,
-          readableListening: false,
-          resumeScheduled: false,
-          errorEmitted: false,
-          emitClose: false,
-          autoDestroy: false,
-          destroyed: false,
-          errored: null,
-          closed: false,
-          closeEmitted: false,
-          defaultEncoding: 'utf8',
-          awaitDrainWriters: null,
-          multiAwaitDrain: false,
-          readingMore: false,
-          dataEmitted: true,
-          decoder: null,
-          encoding: null,
-          [Symbol(kPaused)]: false
-        },
-        _events: [Object: null prototype] {
-          end: [Function: onReadableStreamEnd],
-          free: [Function: onFree],
-          close: [ [Function: onClose], [Function: socketCloseListener] ],
-          timeout: [Function: onTimeout],
-          agentRemove: [Function: onRemove],
-          error: [Function: socketErrorListener],
-          finish: [Function: bound onceWrapper] { listener: [Function: destroy] }
-        },
-        _eventsCount: 7,
-        _maxListeners: undefined,
-        _writableState: WritableState {
-          objectMode: false,
-          highWaterMark: 16384,
-          finalCalled: true,
-          needDrain: false,
-          ending: true,
-          ended: true,
-          finished: false,
-          destroyed: false,
-          decodeStrings: false,
-          defaultEncoding: 'utf8',
-          length: 0,
-          writing: false,
-          corked: 0,
-          sync: false,
-          bufferProcessing: false,
-          onwrite: [Function: bound onwrite],
-          writecb: null,
-          writelen: 0,
-          afterWriteTickInfo: null,
-          buffered: [],
-          bufferedIndex: 0,
-          allBuffers: true,
-          allNoop: true,
-          pendingcb: 1,
-          prefinished: false,
-          errorEmitted: false,
-          emitClose: false,
-          autoDestroy: false,
-          errored: null,
-          closed: false,
-          closeEmitted: false,
-          writable: true
-        },
-        allowHalfOpen: false,
-        _sockname: null,
-        _pendingData: null,
-        _pendingEncoding: '',
-        server: null,
-        _server: null,
-        parser: null,
-        _httpMessage: ClientRequest {
-          _events: [Object: null prototype] {
-            socket: [Function (anonymous)],
-            timeout: [Function: bound onceWrapper] {
-              listener: [Function (anonymous)]
-            },
-            error: [Function (anonymous)],
-            prefinish: [Function: requestOnPrefinish]
-          },
-          _eventsCount: 4,
-          _maxListeners: undefined,
-          outputData: [],
-          outputSize: 0,
-          writable: true,
-          destroyed: false,
-          _last: true,
-          chunkedEncoding: false,
-          shouldKeepAlive: false,
-          _defaultKeepAlive: true,
-          useChunkedEncodingByDefault: true,
-          sendDate: false,
-          _removedConnection: false,
-          _removedContLen: false,
-          _removedTE: false,
-          _contentLength: null,
-          _hasBody: true,
-          _trailer: '',
-          finished: true,
-          _headerSent: true,
-          socket: [Circular *1],
-          _header: 'POST /v1alpha1/pg_dump HTTP/1.1\r\n' +
-            'x-hasura-role: admin\r\n' +
-            'x-hasura-admin-secret: VOWVlP9m9P4HQI9h\r\n' +
-            'content-type: application/json\r\n' +
-            'content-length: 95\r\n' +
-            'Host: localhost:8080\r\n' +
-            'Connection: close\r\n' +
-            '\r\n',
-          _keepAliveTimeout: 0,
-          _onPendingData: [Function: noopPendingOutput],
-          agent: Agent {
-            _events: [Object: null prototype] {
-              free: [Function (anonymous)],
-              newListener: [Function: maybeEnableKeylog]
-            },
-            _eventsCount: 2,
-            _maxListeners: undefined,
-            defaultPort: 80,
-            protocol: 'http:',
-            options: { path: null },
-            requests: {},
-            sockets: { 'localhost:8080:': [ [Circular *1] ] },
-            freeSockets: {},
-            keepAliveMsecs: 1000,
-            keepAlive: false,
-            maxSockets: Infinity,
-            maxFreeSockets: 256,
-            scheduling: 'lifo',
-            maxTotalSockets: Infinity,
-            totalSocketCount: 1,
-            [Symbol(kCapture)]: false
-          },
-          socketPath: undefined,
-          method: 'POST',
-          maxHeaderSize: undefined,
-          insecureHTTPParser: undefined,
-          path: '/v1alpha1/pg_dump',
-          _ended: true,
-          res: [Circular *2],
-          aborted: false,
-          timeoutCb: [Function: emitRequestTimeout],
-          upgradeOrConnect: false,
-          parser: null,
-          maxHeadersCount: null,
-          reusedSocket: false,
-          host: 'localhost',
-          protocol: 'http:',
-          [Symbol(kCapture)]: false,
-          [Symbol(kNeedDrain)]: false,
-          [Symbol(corked)]: 0,
-          [Symbol(kOutHeaders)]: [Object: null prototype] {
-            'x-hasura-role': [ 'x-hasura-role', 'admin' ],
-            'x-hasura-admin-secret': [ 'x-hasura-admin-secret', 'VOWVlP9m9P4HQI9h' ],
-            'content-type': [ 'content-type', 'application/json' ],
-            'content-length': [ 'content-length', 95 ],
-            host: [ 'Host', 'localhost:8080' ]
-          }
-        },
-        timeout: 10000,
-        [Symbol(async_id_symbol)]: 39,
-        [Symbol(kHandle)]: TCP {
-          reading: true,
-          onconnection: null,
-          [Symbol(owner_symbol)]: [Circular *1]
-        },
-        [Symbol(kSetNoDelay)]: false,
-        [Symbol(lastWriteQueueSize)]: 0,
-        [Symbol(timeout)]: <ref *3> Timeout {
-          _idleTimeout: 10000,
-          _idlePrev: TimersList {
-            _idleNext: [Circular *3],
-            _idlePrev: [Circular *3],
-            expiry: 12696,
-            id: -9007199254740991,
-            msecs: 10000,
-            priorityQueuePosition: 1
-          },
-          _idleNext: TimersList {
-            _idleNext: [Circular *3],
-            _idlePrev: [Circular *3],
-            expiry: 12696,
-            id: -9007199254740991,
-            msecs: 10000,
-            priorityQueuePosition: 1
-          },
-          _idleStart: 2877,
-          _onTimeout: [Function: bound ],
-          _timerArgs: undefined,
-          _repeat: null,
-          _destroyed: false,
-          [Symbol(refed)]: false,
-          [Symbol(kHasPrimitive)]: false,
-          [Symbol(asyncId)]: 52,
-          [Symbol(triggerId)]: 50
-        },
-        [Symbol(kBuffer)]: null,
-        [Symbol(kBufferCb)]: null,
-        [Symbol(kBufferGen)]: null,
-        [Symbol(kCapture)]: false,
-        [Symbol(kBytesRead)]: 0,
-        [Symbol(kBytesWritten)]: 0,
-        [Symbol(RequestTimeout)]: undefined
-      },
-      httpVersionMajor: 1,
-      httpVersionMinor: 1,
-      httpVersion: '1.1',
-      complete: true,
-      headers: {
-        'transfer-encoding': 'chunked',
-        date: 'Thu, 30 Dec 2021 07:13:57 GMT',
-        server: 'Warp/3.3.14',
-        'x-request-id': 'a2175717-dacd-4131-a638-c1062852c342',
-        'content-type': 'application/sql; charset=utf-8'
-      },
-      rawHeaders: [
-        'Transfer-Encoding',
-        'chunked',
-        'Date',
-        'Thu, 30 Dec 2021 07:13:57 GMT',
-        'Server',
-        'Warp/3.3.14',
-        'x-request-id',
-        'a2175717-dacd-4131-a638-c1062852c342',
-        'Content-Type',
-        'application/sql; charset=utf-8'
-      ],
-      trailers: {},
-      rawTrailers: [],
-      aborted: false,
-      upgrade: false,
-      url: '',
-      method: null,
-      statusCode: 200,
-      statusMessage: 'OK',
-      client: <ref *1> Socket {
-        connecting: false,
-        _hadError: false,
-        _parent: null,
-        _host: 'localhost',
-        _readableState: ReadableState {
-          objectMode: false,
-          highWaterMark: 16384,
-          buffer: BufferList { head: null, tail: null, length: 0 },
-          length: 0,
-          pipes: [],
-          flowing: true,
-          ended: false,
-          endEmitted: false,
-          reading: true,
-          sync: false,
-          needReadable: true,
-          emittedReadable: false,
-          readableListening: false,
-          resumeScheduled: false,
-          errorEmitted: false,
-          emitClose: false,
-          autoDestroy: false,
-          destroyed: false,
-          errored: null,
-          closed: false,
-          closeEmitted: false,
-          defaultEncoding: 'utf8',
-          awaitDrainWriters: null,
-          multiAwaitDrain: false,
-          readingMore: false,
-          dataEmitted: true,
-          decoder: null,
-          encoding: null,
-          [Symbol(kPaused)]: false
-        },
-        _events: [Object: null prototype] {
-          end: [Function: onReadableStreamEnd],
-          free: [Function: onFree],
-          close: [ [Function: onClose], [Function: socketCloseListener] ],
-          timeout: [Function: onTimeout],
-          agentRemove: [Function: onRemove],
-          error: [Function: socketErrorListener],
-          finish: [Function: bound onceWrapper] { listener: [Function: destroy] }
-        },
-        _eventsCount: 7,
-        _maxListeners: undefined,
-        _writableState: WritableState {
-          objectMode: false,
-          highWaterMark: 16384,
-          finalCalled: true,
-          needDrain: false,
-          ending: true,
-          ended: true,
-          finished: false,
-          destroyed: false,
-          decodeStrings: false,
-          defaultEncoding: 'utf8',
-          length: 0,
-          writing: false,
-          corked: 0,
-          sync: false,
-          bufferProcessing: false,
-          onwrite: [Function: bound onwrite],
-          writecb: null,
-          writelen: 0,
-          afterWriteTickInfo: null,
-          buffered: [],
-          bufferedIndex: 0,
-          allBuffers: true,
-          allNoop: true,
-          pendingcb: 1,
-          prefinished: false,
-          errorEmitted: false,
-          emitClose: false,
-          autoDestroy: false,
-          errored: null,
-          closed: false,
-          closeEmitted: false,
-          writable: true
-        },
-        allowHalfOpen: false,
-        _sockname: null,
-        _pendingData: null,
-        _pendingEncoding: '',
-        server: null,
-        _server: null,
-        parser: null,
-        _httpMessage: ClientRequest {
-          _events: [Object: null prototype] {
-            socket: [Function (anonymous)],
-            timeout: [Function: bound onceWrapper] {
-              listener: [Function (anonymous)]
-            },
-            error: [Function (anonymous)],
-            prefinish: [Function: requestOnPrefinish]
-          },
-          _eventsCount: 4,
-          _maxListeners: undefined,
-          outputData: [],
-          outputSize: 0,
-          writable: true,
-          destroyed: false,
-          _last: true,
-          chunkedEncoding: false,
-          shouldKeepAlive: false,
-          _defaultKeepAlive: true,
-          useChunkedEncodingByDefault: true,
-          sendDate: false,
-          _removedConnection: false,
-          _removedContLen: false,
-          _removedTE: false,
-          _contentLength: null,
-          _hasBody: true,
-          _trailer: '',
-          finished: true,
-          _headerSent: true,
-          socket: [Circular *1],
-          _header: 'POST /v1alpha1/pg_dump HTTP/1.1\r\n' +
-            'x-hasura-role: admin\r\n' +
-            'x-hasura-admin-secret: VOWVlP9m9P4HQI9h\r\n' +
-            'content-type: application/json\r\n' +
-            'content-length: 95\r\n' +
-            'Host: localhost:8080\r\n' +
-            'Connection: close\r\n' +
-            '\r\n',
-          _keepAliveTimeout: 0,
-          _onPendingData: [Function: noopPendingOutput],
-          agent: Agent {
-            _events: [Object: null prototype] {
-              free: [Function (anonymous)],
-              newListener: [Function: maybeEnableKeylog]
-            },
-            _eventsCount: 2,
-            _maxListeners: undefined,
-            defaultPort: 80,
-            protocol: 'http:',
-            options: { path: null },
-            requests: {},
-            sockets: { 'localhost:8080:': [ [Circular *1] ] },
-            freeSockets: {},
-            keepAliveMsecs: 1000,
-            keepAlive: false,
-            maxSockets: Infinity,
-            maxFreeSockets: 256,
-            scheduling: 'lifo',
-            maxTotalSockets: Infinity,
-            totalSocketCount: 1,
-            [Symbol(kCapture)]: false
-          },
-          socketPath: undefined,
-          method: 'POST',
-          maxHeaderSize: undefined,
-          insecureHTTPParser: undefined,
-          path: '/v1alpha1/pg_dump',
-          _ended: true,
-          res: [Circular *2],
-          aborted: false,
-          timeoutCb: [Function: emitRequestTimeout],
-          upgradeOrConnect: false,
-          parser: null,
-          maxHeadersCount: null,
-          reusedSocket: false,
-          host: 'localhost',
-          protocol: 'http:',
-          [Symbol(kCapture)]: false,
-          [Symbol(kNeedDrain)]: false,
-          [Symbol(corked)]: 0,
-          [Symbol(kOutHeaders)]: [Object: null prototype] {
-            'x-hasura-role': [ 'x-hasura-role', 'admin' ],
-            'x-hasura-admin-secret': [ 'x-hasura-admin-secret', 'VOWVlP9m9P4HQI9h' ],
-            'content-type': [ 'content-type', 'application/json' ],
-            'content-length': [ 'content-length', 95 ],
-            host: [ 'Host', 'localhost:8080' ]
-          }
-        },
-        timeout: 10000,
-        [Symbol(async_id_symbol)]: 39,
-        [Symbol(kHandle)]: TCP {
-          reading: true,
-          onconnection: null,
-          [Symbol(owner_symbol)]: [Circular *1]
-        },
-        [Symbol(kSetNoDelay)]: false,
-        [Symbol(lastWriteQueueSize)]: 0,
-        [Symbol(timeout)]: <ref *3> Timeout {
-          _idleTimeout: 10000,
-          _idlePrev: TimersList {
-            _idleNext: [Circular *3],
-            _idlePrev: [Circular *3],
-            expiry: 12696,
-            id: -9007199254740991,
-            msecs: 10000,
-            priorityQueuePosition: 1
-          },
-          _idleNext: TimersList {
-            _idleNext: [Circular *3],
-            _idlePrev: [Circular *3],
-            expiry: 12696,
-            id: -9007199254740991,
-            msecs: 10000,
-            priorityQueuePosition: 1
-          },
-          _idleStart: 2877,
-          _onTimeout: [Function: bound ],
-          _timerArgs: undefined,
-          _repeat: null,
-          _destroyed: false,
-          [Symbol(refed)]: false,
-          [Symbol(kHasPrimitive)]: false,
-          [Symbol(asyncId)]: 52,
-          [Symbol(triggerId)]: 50
-        },
-        [Symbol(kBuffer)]: null,
-        [Symbol(kBufferCb)]: null,
-        [Symbol(kBufferGen)]: null,
-        [Symbol(kCapture)]: false,
-        [Symbol(kBytesRead)]: 0,
-        [Symbol(kBytesWritten)]: 0,
-        [Symbol(RequestTimeout)]: undefined
-      },
-      _consuming: false,
-      _dumped: false,
-      req: <ref *4> ClientRequest {
-        _events: [Object: null prototype] {
-          socket: [Function (anonymous)],
-          timeout: [Function: bound onceWrapper] { listener: [Function (anonymous)] },
-          error: [Function (anonymous)],
-          prefinish: [Function: requestOnPrefinish]
-        },
-        _eventsCount: 4,
-        _maxListeners: undefined,
-        outputData: [],
-        outputSize: 0,
-        writable: true,
-        destroyed: false,
-        _last: true,
-        chunkedEncoding: false,
-        shouldKeepAlive: false,
-        _defaultKeepAlive: true,
-        useChunkedEncodingByDefault: true,
-        sendDate: false,
-        _removedConnection: false,
-        _removedContLen: false,
-        _removedTE: false,
-        _contentLength: null,
-        _hasBody: true,
-        _trailer: '',
-        finished: true,
-        _headerSent: true,
-        socket: <ref *1> Socket {
-          connecting: false,
-          _hadError: false,
-          _parent: null,
-          _host: 'localhost',
-          _readableState: ReadableState {
-            objectMode: false,
-            highWaterMark: 16384,
-            buffer: BufferList { head: null, tail: null, length: 0 },
-            length: 0,
-            pipes: [],
-            flowing: true,
-            ended: false,
-            endEmitted: false,
-            reading: true,
-            sync: false,
-            needReadable: true,
-            emittedReadable: false,
-            readableListening: false,
-            resumeScheduled: false,
-            errorEmitted: false,
-            emitClose: false,
-            autoDestroy: false,
-            destroyed: false,
-            errored: null,
-            closed: false,
-            closeEmitted: false,
-            defaultEncoding: 'utf8',
-            awaitDrainWriters: null,
-            multiAwaitDrain: false,
-            readingMore: false,
-            dataEmitted: true,
-            decoder: null,
-            encoding: null,
-            [Symbol(kPaused)]: false
-          },
-          _events: [Object: null prototype] {
-            end: [Function: onReadableStreamEnd],
-            free: [Function: onFree],
-            close: [ [Function: onClose], [Function: socketCloseListener] ],
-            timeout: [Function: onTimeout],
-            agentRemove: [Function: onRemove],
-            error: [Function: socketErrorListener],
-            finish: [Function: bound onceWrapper] { listener: [Function: destroy] }
-          },
-          _eventsCount: 7,
-          _maxListeners: undefined,
-          _writableState: WritableState {
-            objectMode: false,
-            highWaterMark: 16384,
-            finalCalled: true,
-            needDrain: false,
-            ending: true,
-            ended: true,
-            finished: false,
-            destroyed: false,
-            decodeStrings: false,
-            defaultEncoding: 'utf8',
-            length: 0,
-            writing: false,
-            corked: 0,
-            sync: false,
-            bufferProcessing: false,
-            onwrite: [Function: bound onwrite],
-            writecb: null,
-            writelen: 0,
-            afterWriteTickInfo: null,
-            buffered: [],
-            bufferedIndex: 0,
-            allBuffers: true,
-            allNoop: true,
-            pendingcb: 1,
-            prefinished: false,
-            errorEmitted: false,
-            emitClose: false,
-            autoDestroy: false,
-            errored: null,
-            closed: false,
-            closeEmitted: false,
-            writable: true
-          },
-          allowHalfOpen: false,
-          _sockname: null,
-          _pendingData: null,
-          _pendingEncoding: '',
-          server: null,
-          _server: null,
-          parser: null,
-          _httpMessage: [Circular *4],
-          timeout: 10000,
-          [Symbol(async_id_symbol)]: 39,
-          [Symbol(kHandle)]: TCP {
-            reading: true,
-            onconnection: null,
-            [Symbol(owner_symbol)]: [Circular *1]
-          },
-          [Symbol(kSetNoDelay)]: false,
-          [Symbol(lastWriteQueueSize)]: 0,
-          [Symbol(timeout)]: <ref *3> Timeout {
-            _idleTimeout: 10000,
-            _idlePrev: TimersList {
-              _idleNext: [Circular *3],
-              _idlePrev: [Circular *3],
-              expiry: 12696,
-              id: -9007199254740991,
-              msecs: 10000,
-              priorityQueuePosition: 1
-            },
-            _idleNext: TimersList {
-              _idleNext: [Circular *3],
-              _idlePrev: [Circular *3],
-              expiry: 12696,
-              id: -9007199254740991,
-              msecs: 10000,
-              priorityQueuePosition: 1
-            },
-            _idleStart: 2877,
-            _onTimeout: [Function: bound ],
-            _timerArgs: undefined,
-            _repeat: null,
-            _destroyed: false,
-            [Symbol(refed)]: false,
-            [Symbol(kHasPrimitive)]: false,
-            [Symbol(asyncId)]: 52,
-            [Symbol(triggerId)]: 50
-          },
-          [Symbol(kBuffer)]: null,
-          [Symbol(kBufferCb)]: null,
-          [Symbol(kBufferGen)]: null,
-          [Symbol(kCapture)]: false,
-          [Symbol(kBytesRead)]: 0,
-          [Symbol(kBytesWritten)]: 0,
-          [Symbol(RequestTimeout)]: undefined
-        },
-        _header: 'POST /v1alpha1/pg_dump HTTP/1.1\r\n' +
-          'x-hasura-role: admin\r\n' +
-          'x-hasura-admin-secret: VOWVlP9m9P4HQI9h\r\n' +
-          'content-type: application/json\r\n' +
-          'content-length: 95\r\n' +
-          'Host: localhost:8080\r\n' +
-          'Connection: close\r\n' +
-          '\r\n',
-        _keepAliveTimeout: 0,
-        _onPendingData: [Function: noopPendingOutput],
-        agent: Agent {
-          _events: [Object: null prototype] {
-            free: [Function (anonymous)],
-            newListener: [Function: maybeEnableKeylog]
-          },
-          _eventsCount: 2,
-          _maxListeners: undefined,
-          defaultPort: 80,
-          protocol: 'http:',
-          options: { path: null },
-          requests: {},
-          sockets: {
-            'localhost:8080:': [
-              <ref *1> Socket {
-                connecting: false,
-                _hadError: false,
-                _parent: null,
-                _host: 'localhost',
-                _readableState: ReadableState {
-                  objectMode: false,
-                  highWaterMark: 16384,
-                  buffer: BufferList { head: null, tail: null, length: 0 },
-                  length: 0,
-                  pipes: [],
-                  flowing: true,
-                  ended: false,
-                  endEmitted: false,
-                  reading: true,
-                  sync: false,
-                  needReadable: true,
-                  emittedReadable: false,
-                  readableListening: false,
-                  resumeScheduled: false,
-                  errorEmitted: false,
-                  emitClose: false,
-                  autoDestroy: false,
-                  destroyed: false,
-                  errored: null,
-                  closed: false,
-                  closeEmitted: false,
-                  defaultEncoding: 'utf8',
-                  awaitDrainWriters: null,
-                  multiAwaitDrain: false,
-                  readingMore: false,
-                  dataEmitted: true,
-                  decoder: null,
-                  encoding: null,
-                  [Symbol(kPaused)]: false
-                },
-                _events: [Object: null prototype] {
-                  end: [Function: onReadableStreamEnd],
-                  free: [Function: onFree],
-                  close: [ [Function: onClose], [Function: socketCloseListener] ],
-                  timeout: [Function: onTimeout],
-                  agentRemove: [Function: onRemove],
-                  error: [Function: socketErrorListener],
-                  finish: [Function: bound onceWrapper] {
-                    listener: [Function: destroy]
-                  }
-                },
-                _eventsCount: 7,
-                _maxListeners: undefined,
-                _writableState: WritableState {
-                  objectMode: false,
-                  highWaterMark: 16384,
-                  finalCalled: true,
-                  needDrain: false,
-                  ending: true,
-                  ended: true,
-                  finished: false,
-                  destroyed: false,
-                  decodeStrings: false,
-                  defaultEncoding: 'utf8',
-                  length: 0,
-                  writing: false,
-                  corked: 0,
-                  sync: false,
-                  bufferProcessing: false,
-                  onwrite: [Function: bound onwrite],
-                  writecb: null,
-                  writelen: 0,
-                  afterWriteTickInfo: null,
-                  buffered: [],
-                  bufferedIndex: 0,
-                  allBuffers: true,
-                  allNoop: true,
-                  pendingcb: 1,
-                  prefinished: false,
-                  errorEmitted: false,
-                  emitClose: false,
-                  autoDestroy: false,
-                  errored: null,
-                  closed: false,
-                  closeEmitted: false,
-                  writable: true
-                },
-                allowHalfOpen: false,
-                _sockname: null,
-                _pendingData: null,
-                _pendingEncoding: '',
-                server: null,
-                _server: null,
-                parser: null,
-                _httpMessage: [Circular *4],
-                timeout: 10000,
-                [Symbol(async_id_symbol)]: 39,
-                [Symbol(kHandle)]: TCP {
-                  reading: true,
-                  onconnection: null,
-                  [Symbol(owner_symbol)]: [Circular *1]
-                },
-                [Symbol(kSetNoDelay)]: false,
-                [Symbol(lastWriteQueueSize)]: 0,
-                [Symbol(timeout)]: <ref *3> Timeout {
-                  _idleTimeout: 10000,
-                  _idlePrev: TimersList {
-                    _idleNext: [Circular *3],
-                    _idlePrev: [Circular *3],
-                    expiry: 12696,
-                    id: -9007199254740991,
-                    msecs: 10000,
-                    priorityQueuePosition: 1
-                  },
-                  _idleNext: TimersList {
-                    _idleNext: [Circular *3],
-                    _idlePrev: [Circular *3],
-                    expiry: 12696,
-                    id: -9007199254740991,
-                    msecs: 10000,
-                    priorityQueuePosition: 1
-                  },
-                  _idleStart: 2877,
-                  _onTimeout: [Function: bound ],
-                  _timerArgs: undefined,
-                  _repeat: null,
-                  _destroyed: false,
-                  [Symbol(refed)]: false,
-                  [Symbol(kHasPrimitive)]: false,
-                  [Symbol(asyncId)]: 52,
-                  [Symbol(triggerId)]: 50
-                },
-                [Symbol(kBuffer)]: null,
-                [Symbol(kBufferCb)]: null,
-                [Symbol(kBufferGen)]: null,
-                [Symbol(kCapture)]: false,
-                [Symbol(kBytesRead)]: 0,
-                [Symbol(kBytesWritten)]: 0,
-                [Symbol(RequestTimeout)]: undefined
-              }
-            ]
-          },
-          freeSockets: {},
-          keepAliveMsecs: 1000,
-          keepAlive: false,
-          maxSockets: Infinity,
-          maxFreeSockets: 256,
-          scheduling: 'lifo',
-          maxTotalSockets: Infinity,
-          totalSocketCount: 1,
-          [Symbol(kCapture)]: false
-        },
-        socketPath: undefined,
-        method: 'POST',
-        maxHeaderSize: undefined,
-        insecureHTTPParser: undefined,
-        path: '/v1alpha1/pg_dump',
-        _ended: true,
-        res: [Circular *2],
-        aborted: false,
-        timeoutCb: [Function: emitRequestTimeout],
-        upgradeOrConnect: false,
-        parser: null,
-        maxHeadersCount: null,
-        reusedSocket: false,
-        host: 'localhost',
-        protocol: 'http:',
-        [Symbol(kCapture)]: false,
-        [Symbol(kNeedDrain)]: false,
-        [Symbol(corked)]: 0,
-        [Symbol(kOutHeaders)]: [Object: null prototype] {
-          'x-hasura-role': [ 'x-hasura-role', 'admin' ],
-          'x-hasura-admin-secret': [ 'x-hasura-admin-secret', 'VOWVlP9m9P4HQI9h' ],
-          'content-type': [ 'content-type', 'application/json' ],
-          'content-length': [ 'content-length', 95 ],
-          host: [ 'Host', 'localhost:8080' ]
-        }
-      },
-      body: 'SET check_function_bodies = false;\n' +
-        'CREATE FUNCTION public.hello() RETURNS text\n' +
-        '    LANGUAGE sql\n' +
-        '    AS $$\n' +
-        "    select 'hello world';\n" +
-        '$$;\n' +
-        'CREATE FUNCTION public.set_current_timestamp_updated_at() RETURNS trigger\n' +
-        '    LANGUAGE plpgsql\n' +
-        '    AS $$\n' +
-        'declare\n' +
-        '  _new record;\n' +
-        'begin\n' +
-        '  _new := new;\n' +
-        '  _new. "updated_at" = now();\n' +
-        '  return _new;\n' +
-        'end;\n' +
-        '$$;\n' +
-        'CREATE TABLE public.file (\n' +
-        '    id uuid DEFAULT public.gen_random_uuid() NOT NULL,\n' +
-        '    name text NOT NULL\n' +
-        ');\n' +
-        'CREATE TABLE public.films (\n' +
-        '    id uuid DEFAULT public.gen_random_uuid() NOT NULL,\n' +
-        '    title text NOT NULL\n' +
-        ');\n' +
-        'CREATE TABLE public.records (\n' +
-        '    id uuid DEFAULT public.gen_random_uuid() NOT NULL,\n' +
-        '    file uuid NOT NULL\n' +
-        ');\n' +
-        'CREATE TABLE public.storage (\n' +
-        '    id integer NOT NULL,\n' +
-        '    name character varying(255),\n' +
-        '    type character varying(255),\n' +
-        '    value character varying(255),\n' +
-        '    created_at timestamp with time zone,\n' +
-        '    updated_at timestamp with time zone\n' +
-        ');\n' +
-        'CREATE SEQUENCE public.storage_id_seq\n' +
-        '    AS integer\n' +
-        '    START WITH 1\n' +
-        '    INCREMENT BY 1\n' +
-        '    NO MINVALUE\n' +
-        '    NO MAXVALUE\n' +
-        '    CACHE 1;\n' +
-        'ALTER SEQUENCE public.storage_id_seq OWNED BY public.storage.id;\n' +
-        "ALTER TABLE ONLY public.storage ALTER COLUMN id SET DEFAULT nextval('public.storage_id_seq'::regclass);\n" +
-        'ALTER TABLE ONLY public.file\n' +
-        '    ADD CONSTRAINT file_pkey PRIMARY KEY (id);\n' +
-        'ALTER TABLE ONLY public.films\n' +
-        '    ADD CONSTRAINT films_pkey PRIMARY KEY (id);\n' +
-        'ALTER TABLE ONLY public.records\n' +
-        '    ADD CONSTRAINT records_pkey PRIMARY KEY (id);\n' +
-        'ALTER TABLE ONLY public.storage\n' +
-        '    ADD CONSTRAINT storage_pkey PRIMARY KEY (id);\n' +
-        'CREATE UNIQUE INDEX films_title_idx ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx1 ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx10 ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx11 ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx12 ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx13 ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx14 ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx15 ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx16 ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx17 ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx2 ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx3 ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx4 ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx5 ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx6 ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx7 ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx8 ON public.films USING btree (title);\n' +
-        'CREATE UNIQUE INDEX films_title_idx9 ON public.films USING btree (title);\n' +
-        'ALTER TABLE ONLY public.records\n' +
-        '    ADD CONSTRAINT records_file_fkey FOREIGN KEY (file) REFERENCES public.file(id) ON UPDATE RESTRICT ON DELETE RESTRICT;\n',
-      [Symbol(kCapture)]: false,
-      [Symbol(RequestTimeout)]: undefined
-    }
-    # Subtest: PGdump
+# Subtest: test/helper/log.ts
+    1..0 # no tests found
+ok 1 - test/helper/log.ts # SKIP no tests found
+
+# Subtest: test/helper/sdk.ts
+    1..0 # no tests found
+ok 2 - test/helper/sdk.ts # SKIP no tests found
+
+# Subtest: test/metadata/action.ts
+    # Subtest: add a custom type
+        ok 1 - should be equal
+        ok 2 - should be equal
+        1..2
+    ok 1 - add a custom type # time=117.116ms
+    
+    # Subtest: update action
         ok 1 - should be equal
         1..1
-    ok 1 - PGdump # time=199.262ms
+    ok 2 - update action # time=57.07ms
     
-    1..1
-    # time=2022.083ms
-    [1640848437109] [32mINFO[39m (7135 on ElvisMini.local):
-        msg: true
-ok 1 - test/pgdump.ts # time=2022.083ms
+    # Subtest: add permission
+        ok 1 - should be equal
+        1..1
+    ok 3 - add permission # time=58.802ms
+    
+    # Subtest: drop permission
+        ok 1 - should be equal
+        1..1
+    ok 4 - drop permission # time=62.354ms
+    
+    [1641626091683] [32mINFO[39m (10714 on ElvisMini.local):
+        0: {
+          "message": "success"
+        }
+        1: {
+          "message": "success"
+        }
+        msg: {
+          "depth": null
+        }
+    # Subtest: drop action
+        ok 1 - should be equal
+        1..1
+    ok 5 - drop action # time=53.428ms
+    
+    1..5
+    # time=354.354ms
+ok 3 - test/metadata/action.ts # time=354.354ms
 
-1..1
-# time=5883.275ms
+# Subtest: test/metadata/metadata.ts
+    # Subtest: metadata
+        # Subtest: export metadata
+            ok 1 - should be equal
+            1..1
+        ok 1 - export metadata # time=19.955ms
+        
+        # Subtest: reload metadata
+            ok 1 - should be equal
+            1..1
+        ok 2 - reload metadata # time=233.275ms
+        
+    [1641626093458] [32mINFO[39m (10716 on ElvisMini.local):
+        0: {
+          "name": "default",
+          "kind": "postgres",
+          "tables": [
+            {
+              "table": {
+                "schema": "auth",
+                "name": "provider"
+              }
+            },
+            {
+              "table": {
+                "schema": "auth",
+                "name": "role"
+              }
+            },
+            {
+              "table": {
+                "schema": "auth",
+                "name": "user"
+              }
+            },
+            {
+              "table": {
+                "schema": "auth",
+                "name": "user_provider"
+              }
+            },
+            {
+              "table": {
+                "schema": "auth",
+                "name": "user_role"
+              }
+            },
+            {
+              "table": {
+                "schema": "public",
+                "name": "file"
+              },
+              "select_permissions": [
+                {
+                  "role": "user",
+                  "permission": {
+                    "columns": [
+                      "name",
+                      "id"
+                    ],
+                    "filter": {}
+                  }
+                }
+              ]
+            },
+            {
+              "table": {
+                "schema": "public",
+                "name": "films"
+              }
+            },
+            {
+              "table": {
+                "schema": "public",
+                "name": "records"
+              }
+            }
+          ],
+          "configuration": {
+            "connection_info": {
+              "use_prepared_statements": true,
+              "database_url": {
+                "from_env": "HASURA_GRAPHQL_DATABASE_URL"
+              },
+              "isolation_level": "read-committed",
+              "pool_settings": {
+                "connection_lifetime": 600,
+                "retries": 1,
+                "idle_timeout": 180,
+                "max_connections": 50
+              }
+            }
+          }
+        }
+        # Subtest: clear metadata
+            ok 1 - should be equal
+            1..1
+        ok 3 - clear metadata # time=111.023ms
+        
+        # Subtest: replace metadata
+            ok 1 - type is Array
+            1..1
+        ok 4 - replace metadata # time=161.82ms
+        
+        1..4
+    ok 1 - metadata # time=530.978ms
+    
+    # Subtest: inconsistent metadata
+        # Subtest: get inconsistent
+            ok 1 - type is Array
+            1..1
+        ok 1 - get inconsistent # time=5.452ms
+        
+    [1641626093979] [32mINFO[39m (10716 on ElvisMini.local):
+        is_consistent: true
+        inconsistent_objects: []
+        # Subtest: drop inconsistent
+            ok 1 - should be equal
+            1..1
+        ok 2 - drop inconsistent # time=50.648ms
+        
+        1..2
+    ok 2 - inconsistent metadata # time=61.701ms
+    
+    1..2
+    # time=594.822ms
+ok 4 - test/metadata/metadata.ts # time=594.822ms
+
+# Subtest: test/metadata/remote_schema.ts
+    # Subtest: add a remote schema
+        not ok 1 - should be equal
+          ---
+          compare: ===
+          at:
+            line: 17
+            column: 5
+            file: test/metadata/remote_schema.ts
+            type: Test
+          stack: |
+            Test.<anonymous> (test/metadata/remote_schema.ts:17:5)
+          source: |
+            	} catch (err) {
+            		t.equal(err.response?.code, 'already-exists')
+            ----^
+            	}
+            })
+          diff: |
+            --- expected
+            +++ actual
+            @@ -1,1 +1,1 @@
+            -already-exists
+            +remote-schema-error
+          ...
+        
+        1..1
+        # failed 1 test
+    not ok 1 - add a remote schema # time=1732.472ms
+    
+    # Subtest: update a remote schema
+        not ok 1 - (unnamed test)
+          ---
+          at:
+            line: 29
+            column: 5
+            file: test/metadata/remote_schema.ts
+            type: Test
+          stack: |
+            Test.<anonymous> (test/metadata/remote_schema.ts:29:5)
+          source: |
+            	} catch (err) {
+            		t.fail()
+            ----^
+            	}
+            })
+          ...
+        
+        1..1
+        # failed 1 test
+    not ok 2 - update a remote schema # time=6.61ms
+    
+    # Subtest: reload a remote schema
+        not ok 1 - (unnamed test)
+          ---
+          at:
+            line: 40
+            column: 5
+            file: test/metadata/remote_schema.ts
+            type: Test
+          stack: |
+            Test.<anonymous> (test/metadata/remote_schema.ts:40:5)
+          source: |
+            		log.error(err.response)
+            		t.fail()
+            ----^
+            	}
+            })
+          ...
+        
+        1..1
+        # failed 1 test
+    not ok 3 - reload a remote schema # time=5.712ms
+    
+    # Subtest: introspect a remote schema
+        not ok 1 - (unnamed test)
+          ---
+          at:
+            line: 52
+            column: 5
+            file: test/metadata/remote_schema.ts
+            type: Test
+          stack: |
+            Test.<anonymous> (test/metadata/remote_schema.ts:52:5)
+          source: |
+            	} catch (err) {
+            		t.fail()
+            ----^
+            	}
+            })
+          ...
+        
+        1..1
+        # failed 1 test
+    not ok 4 - introspect a remote schema # time=5.326ms
+    
+    # Subtest: permission add/drop
+        # Subtest: add a permission
+            not ok 1 - should be equal
+              ---
+              compare: ===
+              at:
+                line: 79
+                column: 6
+                file: test/metadata/remote_schema.ts
+                type: Test
+              stack: |
+                Test.<anonymous> (test/metadata/remote_schema.ts:79:6)
+              source: |
+                			log.error(err)
+                			t.equal(err.response?.code, 'already-exists')
+                -----^
+                		}
+                	})
+              diff: |
+                --- expected
+                +++ actual
+                @@ -1,1 +1,1 @@
+                -already-exists
+                +not-exists
+              ...
+            
+            1..1
+            # failed 1 test
+        not ok 1 - add a permission # time=8.577ms
+        
+        # Subtest: drop a permission
+            ok 1 - should be equal
+            1..1
+        ok 2 - drop a permission # time=3.971ms
+        
+        1..2
+        # failed 1 of 2 tests
+    not ok 5 - permission add/drop # time=15.04ms
+    
+    # Subtest: remove a remote schema
+        ok 1 - should be equal
+        1..1
+    ok 6 - remove a remote schema # time=3.898ms
+    
+    1..6
+    # failed 5 of 6 tests
+    # time=1772.588ms
+    [1641626097626] [31mERROR[39m (10718 on ElvisMini.local):
+        path: "$.args"
+        code: "not-exists"
+        error: "remote schema with name \"fake\" does not exist"
+    [1641626097640] [31mERROR[39m (10718 on ElvisMini.local): [36mnot-exists[39m
+        err: {
+          "type": "MetadataError",
+          "message": "not-exists",
+          "stack":
+              Error: not-exists
+                  at MetadataQuery.run (/Volumes/Root/Users/Elvis/WIP/SeaLight/server/hasura-sdk/src/abstract_query.ts:2:894)
+                  at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                  at async Test.<anonymous> (/Volumes/Root/Users/Elvis/WIP/SeaLight/server/hasura-sdk/test/metadata/remote_schema.ts:75:17)
+          "response": {
+            "path": "$.args",
+            "error": "remote schema \"fake\" doesn't exist",
+            "code": "not-exists"
+          },
+          "timestamp": "2022-01-08T07:14:57.640Z"
+        }
+    [1641626097648] [31mERROR[39m (10718 on ElvisMini.local):
+        path: "$.args"
+        code: "not-exists"
+        error: "remote schema \"fake\" doesn't exist"
+not ok 5 - test/metadata/remote_schema.ts # time=1772.588ms
+  ---
+  env:
+    TS_NODE_COMPILER_OPTIONS: "{}"
+  file: test/metadata/remote_schema.ts
+  timeout: 30000
+  command: /usr/local/bin/node
+  args:
+    - -r
+    - /Volumes/Root/Users/Elvis/WIP/SeaLight/server/node_modules/.pnpm/ts-node@10.4.0_bad060d5f9aca5284661d88d739ba15b/node_modules/ts-node/register/index.js
+    - test/metadata/remote_schema.ts
+  stdio:
+    - 0
+    - pipe
+    - 2
+  cwd: /Volumes/Root/Users/Elvis/WIP/SeaLight/server/hasura-sdk
+  exitCode: 1
+  ...
+
+# Subtest: test/metadata/rest.ts
+    # Subtest: create a rest Endpoint
+        # Subtest: create collection
+            ok 1 - should be equal
+            1..1
+        ok 1 - create collection # time=75.416ms
+        
+        # Subtest: add collection to allowlist
+            ok 1 - should be equal
+            1..1
+        ok 2 - add collection to allowlist # time=78.723ms
+        
+        # Subtest: create REST endpoint
+            ok 1 - should be equal
+            1..1
+        ok 3 - create REST endpoint # time=48.743ms
+        
+        1..3
+    ok 1 - create a rest Endpoint # time=207.813ms
+    
+    # Subtest: edit a Endpoint
+        # Subtest: drop rest endpoint
+            ok 1 - should be equal
+            1..1
+        ok 1 - drop rest endpoint # time=76.587ms
+        
+        # Subtest: drop query from collection
+            ok 1 - should be equal
+            1..1
+        ok 2 - drop query from collection # time=56.454ms
+        
+        # Subtest: add query to collection
+            ok 1 - should be equal
+            1..1
+        ok 3 - add query to collection # time=54.301ms
+        
+        # Subtest: create rest endpoint
+            ok 1 - should be equal
+            1..1
+        ok 4 - create rest endpoint # time=54.658ms
+        
+        1..4
+    ok 2 - edit a Endpoint # time=248.152ms
+    
+    # Subtest: clean
+        # Subtest: drop a Endpoint
+            ok 1 - should be equal
+            1..1
+        ok 1 - drop a Endpoint # time=52.732ms
+        
+        # Subtest: drop collection from allowlist
+            ok 1 - should be equal
+            1..1
+        ok 2 - drop collection from allowlist # time=60.604ms
+        
+    [1641626100498] [32mINFO[39m (10719 on ElvisMini.local):
+        message: "success"
+        # Subtest: drop a collection
+            ok 1 - should be equal
+            1..1
+        ok 3 - drop a collection # time=61.418ms
+        
+        1..3
+    ok 3 - clean # time=177.177ms
+    
+    1..3
+    # time=635.408ms
+ok 6 - test/metadata/rest.ts # time=635.408ms
+
+# Subtest: test/metadata/setting.ts
+    # Subtest: InheritedRole
+        # Subtest: add inherited role
+            ok 1 - should be equal
+            1..1
+        ok 1 - add inherited role # time=17.711ms
+        
+        # Subtest: drop inherited role
+            ok 1 - should be equal
+            1..1
+        ok 2 - drop inherited role # time=5.278ms
+        
+        1..2
+    ok 1 - InheritedRole # time=27.577ms
+    
+    # Subtest: TLSallowList
+        # Subtest: add
+            ok 1 - should be equal
+            1..1
+        ok 1 - add # time=59.789ms
+        
+        # Subtest: drop
+            ok 1 - should be equal
+            1..1
+        ok 2 - drop # time=67.118ms
+        
+        1..2
+    ok 2 - TLSallowList # time=132.625ms
+    
+    [1641626102024] [31mERROR[39m (10721 on ElvisMini.local):
+        path: "$.args"
+        code: "not-exists"
+        error: "the following parent role(s) are not found: anonymous which are required to construct the inherited role: \"guest\""
+    [1641626102032] [31mERROR[39m (10721 on ElvisMini.local):
+        path: "$.args"
+        code: "not-exists"
+        error: "\"guest\" inherited role doesn't exist"
+    1..2
+    # time=339.439ms
+ok 7 - test/metadata/setting.ts # time=339.439ms
+
+# Subtest: test/metadata/source.ts
+    # Subtest: all api shouled not be empty
+        # Subtest: source.add
+            ok 1 - should not be equal
+            ok 2 - should not be equal
+            ok 3 - should not be equal
+            ok 4 - should not be equal
+            ok 5 - should not be equal
+            ok 6 - should not be equal
+            ok 7 - should not be equal
+            ok 8 - should not be equal
+            1..8
+        ok 1 - source.add # time=221.718ms
+        
+        # Subtest: source.drop
+            ok 1 - should not be equal
+            ok 2 - should not be equal
+            ok 3 - should not be equal
+            ok 4 - should not be equal
+            ok 5 - should not be equal
+            ok 6 - should not be equal
+            ok 7 - should not be equal
+            ok 8 - should not be equal
+            1..8
+        ok 2 - source.drop # time=66.851ms
+        
+        1..2
+    ok 1 - all api shouled not be empty # time=292.859ms
+    
+    # Subtest: source operations
+        # Subtest: add
+            ok 1 - should be equal
+            1..1
+        ok 1 - add # time=225.58ms
+        
+        # Subtest: drop
+            ok 1 - should be equal
+            1..1
+        ok 2 - drop # time=49.498ms
+        
+        1..2
+    ok 2 - source operations # time=281.295ms
+    
+    # Subtest: bulk
+        ok 1 - should be equal
+        ok 2 - should be equal
+        1..2
+    ok 3 - bulk # time=260.613ms
+    
+    1..3
+    # time=837ms
+ok 8 - test/metadata/source.ts # time=837ms
+
+# Subtest: test/metadata/table.ts
+    [33mUse async .hasTable to check if table exists and then use plain .createTable. Since .createTableIfNotExists actually just generates plain "CREATE TABLE IF NOT EXIST..." query it will not work correctly if there are any alter table queries generated for columns afterwards. To not break old migrations this function is left untouched for now, but it should not be used when writing new code and it is removed from documentation.[39m
+    [1641626106814] [32mINFO[39m (10725 on ElvisMini.local):
+    # Subtest: table
+        0: {
+          "result_type": "CommandOk",
+          "result": null
+        }
+        1: {
+          "result_type": "CommandOk",
+          "result": null
+        }
+        msg: {
+          "depth": null
+        }
+        # Subtest: track tables
+            ok 1 - should be equal
+            ok 2 - should be equal
+            ok 3 - should be equal
+            1..3
+        ok 1 - track tables # time=474.55ms
+        
+        # Subtest: set as enum
+            ok 1 - should be equal
+            1..1
+        ok 2 - set as enum # time=165.122ms
+        
+        # Subtest: customize a table
+            ok 1 - should be equal
+            1..1
+        ok 3 - customize a table # time=164.043ms
+        
+        1..3
+    ok 1 - table # time=811.083ms
+    
+    # Subtest: permission
+        # Subtest: create a insert permission
+            ok 1 - should be equal
+            1..1
+        ok 1 - create a insert permission # time=168.164ms
+        
+        # Subtest: create a select permission
+            ok 1 - should be equal
+            1..1
+        ok 2 - create a select permission # time=170.815ms
+        
+        # Subtest: create an update permission
+            ok 1 - should be equal
+            1..1
+        ok 3 - create an update permission # time=170.003ms
+        
+        # Subtest: create a delete permission
+            ok 1 - should be equal
+            1..1
+        ok 4 - create a delete permission # time=158.757ms
+        
+        # Subtest: commnet
+            ok 1 - should be equal
+            1..1
+        ok 5 - commnet # time=178.006ms
+        
+        # Subtest: drop a insert permission
+            ok 1 - should be equal
+            1..1
+        ok 6 - drop a insert permission # time=171.616ms
+        
+        # Subtest: drop a select permission
+            ok 1 - should be equal
+            1..1
+        ok 7 - drop a select permission # time=157.028ms
+        
+    [1641626108475] [32mINFO[39m (10725 on ElvisMini.local):
+        message: "success"
+        # Subtest: drop a update permission
+            ok 1 - should be equal
+            1..1
+        ok 8 - drop a update permission # time=170.628ms
+        
+        # Subtest: drop a delete permission
+            ok 1 - should be equal
+            1..1
+        ok 9 - drop a delete permission # time=154.903ms
+        
+        1..9
+    ok 2 - permission # time=1503.81ms
+    
+    # Subtest: relationship
+        # Subtest: addObjectRelationship
+            ok 1 - should be equal
+            1..1
+        ok 1 - addObjectRelationship # time=169.586ms
+        
+    [1641626109301] [32mINFO[39m (10725 on ElvisMini.local):
+        message: "success"
+        msg: {
+          "depth": null
+        }
+        # Subtest: addArrayRelationship
+            ok 1 - should be equal
+            1..1
+        ok 2 - addArrayRelationship # time=170.467ms
+        
+    [1641626109472] [32mINFO[39m (10725 on ElvisMini.local):
+        message: "success"
+        msg: {
+          "depth": null
+        }
+        # Subtest: drop
+            ok 1 - should be equal
+            1..1
+        ok 3 - drop # time=160.719ms
+        
+    [1641626109633] [32mINFO[39m (10725 on ElvisMini.local):
+        message: "success"
+        msg: {
+          "depth": null
+        }
+        # Subtest: rename
+            ok 1 - should be equal
+            1..1
+        ok 4 - rename # time=168.54ms
+        
+    [1641626109802] [32mINFO[39m (10725 on ElvisMini.local):
+        message: "success"
+        msg: {
+          "depth": null
+        }
+        # Subtest: commnet
+            ok 1 - should be equal
+            1..1
+        ok 5 - commnet # time=161.336ms
+        
+        1..5
+    ok 3 - relationship # time=833.313ms
+    
+    [1641626109963] [32mINFO[39m (10725 on ElvisMini.local):
+    # Subtest: schema function
+        message: "success"
+        msg: {
+          "depth": null
+        }
+        # Subtest: add a schema function
+            ok 1 - should be equal
+            1..1
+        ok 1 - add a schema function # time=441.336ms
+        
+        # Subtest: track schema function
+            ok 1 - should be equal
+            1..1
+        ok 2 - track schema function # time=168.532ms
+        
+    [1641626110407] [32mINFO[39m (10725 on ElvisMini.local):
+    [1641626110575] [32mINFO[39m (10725 on ElvisMini.local):
+        result_type: "CommandOk"
+        result: null
+        message: "success"
+        # Subtest: customize schema function
+            ok 1 - should be equal
+            1..1
+        ok 3 - customize schema function # time=166.737ms
+        
+    [1641626110742] [32mINFO[39m (10725 on ElvisMini.local):
+        message: "success"
+        # Subtest: add a permission
+            ok 1 - should be equal
+            ok 2 - should be equal
+            1..2
+        ok 4 - add a permission # time=338.994ms
+        
+    [1641626111081] [32mINFO[39m (10725 on ElvisMini.local):
+        0: {
+          "message": "success"
+        }
+        1: {
+          "message": "success"
+        }
+        # Subtest: drop a permission
+            ok 1 - should be equal
+            1..1
+        ok 5 - drop a permission # time=170.877ms
+        
+        # Subtest: untrack a function
+            ok 1 - should be equal
+            1..1
+        ok 6 - untrack a function # time=169.515ms
+        
+        1..6
+    ok 4 - schema function # time=1459.757ms
+    
+    # Subtest: computed field
+        # Subtest: add a computed field function
+            ok 1 - should be equal
+            1..1
+        ok 1 - add a computed field function # time=415.302ms
+        
+        # Subtest: add a computed field
+            ok 1 - should be equal
+            1..1
+        ok 2 - add a computed field # time=166.749ms
+        
+        # Subtest: drop a computed field
+            ok 1 - should be equal
+            1..1
+        ok 3 - drop a computed field # time=171.393ms
+        
+        # Subtest: drop functions
+            ok 1 - should be equal
+            1..1
+        ok 4 - drop functions # time=422.798ms
+        
+        1..4
+    ok 5 - computed field # time=1178.577ms
+    
+    # Subtest: untrack tables
+        ok 1 - should be equal
+        ok 2 - should be equal
+        ok 3 - should be equal
+        1..3
+    ok 6 - untrack tables # time=435.175ms
+    
+    1..6
+    # time=6766.672ms
+    [1641626113463] [32mINFO[39m (10725 on ElvisMini.local):
+        result_type: "CommandOk"
+        result: null
+        msg: {
+          "depth": null
+        }
+ok 9 - test/metadata/table.ts # time=6766.672ms
+
+# Subtest: test/metadata/trigger.ts
+    # Subtest: event trigger
+        # Subtest: add a event trigger
+            ok 1 - should be equal
+            1..1
+        ok 1 - add a event trigger # time=205.416ms
+        
+        # Subtest: invoke a event trigger
+            ok 1 - should be equal
+            1..1
+        ok 2 - invoke a event trigger # time=5.134ms
+        
+        # Subtest: redeliver a event trigger
+            ok 1 - should be equal
+            1..1
+        ok 3 - redeliver a event trigger # time=15.395ms
+        
+    [1641626115889] [31mERROR[39m (10734 on ElvisMini.local):
+        path: "$.args"
+        code: "not-exists"
+        error: "event not found"
+        # Subtest: drop a event trigger
+            ok 1 - should be equal
+            1..1
+        ok 4 - drop a event trigger # time=172.714ms
+        
+        1..4
+    ok 1 - event trigger # time=403.733ms
+    
+    [1641626116063] [32mINFO[39m (10734 on ElvisMini.local):
+    # Subtest: cron trigger
+        message: "success"
+        # Subtest: add a cron trigger
+            ok 1 - should be equal
+            1..1
+        ok 1 - add a cron trigger # time=80.438ms
+        
+    [1641626116149] [32mINFO[39m (10734 on ElvisMini.local):
+        message: "success"
+        # Subtest: drop a cron trigger
+            ok 1 - should be equal
+            1..1
+        ok 2 - drop a cron trigger # time=57.616ms
+        
+        1..2
+    ok 2 - cron trigger # time=144.176ms
+    
+    # Subtest: schedule trigger
+        # Subtest: add a schedule trigger
+            ok 1 - should be equal
+            1..1
+        ok 1 - add a schedule trigger # time=9.039ms
+        
+        # Subtest: drop a schedule trigger
+            ok 1 - should be equal
+            1..1
+        ok 2 - drop a schedule trigger # time=8.976ms
+        
+        1..2
+    ok 3 - schedule trigger # time=20.625ms
+    
+    1..3
+    # time=570.732ms
+    [1641626116219] [32mINFO[39m (10734 on ElvisMini.local):
+        message: "success"
+        event_id: "8792debb-3e76-4b7b-a289-b88894016cf5"
+    [1641626116228] [32mINFO[39m (10734 on ElvisMini.local):
+        message: "success"
+ok 10 - test/metadata/trigger.ts # time=570.732ms
+
+1..10
+# failed 1 of 10 tests
+# skip: 2
+# time=29067.2ms
